@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tutorial/homepage.dart';
-import 'constants.dart';
+import 'constants/constants.dart';
 
 void main() {
   runApp(MyApp());
@@ -27,6 +27,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       themeMode: themeMode,
       theme: ThemeData(
         colorSchemeSeed: Colors.red,

@@ -46,20 +46,62 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: ElevatedButton(
-        onPressed: _requestPermission,
-        style: ElevatedButton.styleFrom(
-          padding: EdgeInsets.symmetric(horizontal: 24, vertical: 16),
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-          backgroundColor: Colors.red,
-          elevation: 0,
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+
+      children: [
+        Container(
+          height: 100,
+          width: double.infinity,
+          color: Colors.red,
+          padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+          child: Row(
+            children: [
+              Expanded(
+                child: TextField(
+                  decoration: InputDecoration(
+                    hintText: 'Search...',
+                    hintStyle: TextStyle(color: Colors.white70),
+                    filled: true,
+                    fillColor: Colors.white24,
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15),
+                      borderSide: BorderSide.none,
+                    ),
+                    contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 0),
+                  ),
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+              SizedBox(width: 8),
+              ElevatedButton(
+                onPressed: () {
+                  // Implement search functionality
+                },
+                style: ElevatedButton.styleFrom(
+                  padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+                  backgroundColor: Colors.white24,
+                  elevation: 0,
+                ),
+                child: Icon(Icons.search, color: Colors.white),
+              ),
+              SizedBox(width: 8),
+              ElevatedButton(
+                onPressed: _requestPermission,
+                style: ElevatedButton.styleFrom(
+                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+                  backgroundColor: Colors.white24,
+                  elevation: 0,
+                ),
+                child: Icon(Icons.file_open, color: Colors.white),
+              ),
+            ],
+          ),
         ),
-        child: Text(
-          "Select PDF",
-          style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white),
-        ),
-      ),
+        const SizedBox(height: 20),
+      ],
     );
   }
 }
