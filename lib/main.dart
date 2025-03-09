@@ -29,15 +29,11 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       themeMode: themeMode,
       theme: ThemeData(
-        colorSchemeSeed: colorSelection.color,
+        colorSchemeSeed: Colors.red,
         useMaterial3: true,
         brightness: Brightness.light,
       ),
-      darkTheme: ThemeData(
-        colorSchemeSeed: colorSelection.color,
-        useMaterial3: true,
-        brightness: Brightness.dark,
-      ),
+
       home: HomePage(),
     );
   }
