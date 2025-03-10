@@ -30,6 +30,7 @@ class PDFViewerScreen extends StatelessWidget {
         autoSpacing: true,
         pageFling: true,
         onError: (error) {
+          // ignore: avoid_print
           print(error.toString());
         },
       ),
