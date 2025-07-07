@@ -14,7 +14,6 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
   late final PageController _pageController;
-  final List<Widget> _screens = [HomeScreen(), FavouriteScreen(), SettingsPage()];
 
   @override
   void initState() {
@@ -45,11 +44,7 @@ class _HomePageState extends State<HomePage> {
           });
         },
         physics: const NeverScrollableScrollPhysics(),
-        children: const [
-          HomeScreen(),
-          FavouriteScreen(),
-          SettingsPage(),
-        ], // Disable swipe navigation
+        children: const [HomeScreen(), FavouriteScreen(), SettingsPage()],
       ),
       bottomNavigationBar: CustomNavigationBar(),
     );

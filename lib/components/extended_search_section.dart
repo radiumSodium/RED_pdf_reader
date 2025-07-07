@@ -6,6 +6,7 @@ import 'package:permission_handler/permission_handler.dart';
 import 'package:tutorial/screens/pdfreader_screen.dart';
 
 class ExtendedSearchSection extends StatefulWidget {
+  
   const ExtendedSearchSection({super.key});
 
   @override
